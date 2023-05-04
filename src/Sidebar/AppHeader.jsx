@@ -14,7 +14,7 @@ export default function AppHeader() {
         />
       </div>
       <div className="text-white font-bold text-3xl font-serif">
-        <label>SMART HIRING</label>
+        <label>SMART SEARCH</label>
       </div>
       <div>
         
