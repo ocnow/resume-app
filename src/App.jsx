@@ -5,6 +5,7 @@ import SideApp from "./Sidebar/Dashboard/page";
 import UploadIndex from "./Sidebar/Upload/UploadIndex";
 import SearchIndex from "./Sidebar/Search/SearchIndex";
 import SettingIndex from "./Sidebar/Setting/SettingIndex";
+import LoginComp from "./components/Login"
 import {
   QueryClient,
   QueryClientProvider,
@@ -23,7 +24,8 @@ function App() {
           
           <Routes>
             
-            {/* <Route path='/uploadResume' element={<ResumeUploadComp />} />            <Route path='/login'  element={<LoginComp />}/>            <Route path='/selectAction'  element={<EntryComp />}/> */}
+            {/* <Route path='/uploadResume' element={<ResumeUploadComp />} />                       <Route path='/selectAction'  element={<EntryComp />}/> */}
+            <Route path='/login'  element={<LoginComp />}/> 
             <Route path="/dashboard" element={<SideApp />} />
             <Route path="/upload" element={<UploadIndex />} />
             <Route path="/search" element={<SearchIndex />} />

@@ -6,7 +6,7 @@ export default function LoginComp() {
 
     const login = function(){
         console.log("logging in.....");
-        navigate('/selectAction');
+        navigate('/dashboard');
     }
 
     return <div className="flex justify-center items-center h-screen bg-gray-800">

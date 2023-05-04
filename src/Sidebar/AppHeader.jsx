@@ -1,5 +1,5 @@
 import UserIcon from "./mini-comps/user-icon";
-import BarclaysLogo from "./images/Barclays_logo.svg";
+import BarclaysLogo from "./images/logo.svg";
 export default function AppHeader() {
   return (
     <div className="flex justify-between items-center h-12 w-full bg-sky-800 border-b-4 border-blue-950">
