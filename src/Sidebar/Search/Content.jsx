@@ -68,10 +68,10 @@ export default function Content() {
               onChange={handleBCSelect} defaultValue="default"
             >
               <option value="default">Choose a business center</option>
-              <option value="HR">Human Resources</option>
-              <option value="OB">Onboarding</option>
-              <option value="RG">Regulatory</option>
-              <option value="BC">Barclaycard</option>
+              <option value="TC1">TC1</option>
+              <option value="TC2">TC2</option>
+              <option value="TC3">TC3</option>
+              <option value="TC4">TC4</option>
             </select>
           </div>
 
@@ -97,7 +97,7 @@ export default function Content() {
       <div className="flex flex-col w-full h-full p-5">
         {listData === null && <h1>This is loading......</h1>}
         {listData !== null && listData.map((item,index)=>{
-          return <CardResult docName={item.name} downloadLink={item.downloadLink} key={item.id}/>
+          return <CardResult docName={item.name} downloadLink={item.downloadUrl} key={item.id}/>
         }) }
       </div>
     </div>

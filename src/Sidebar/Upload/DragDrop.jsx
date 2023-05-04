@@ -99,8 +99,8 @@ const DragDropFiles = () => {
           <option value="default">
             Choose a Business Process
           </option>
-          <option value="US">TC1</option> <option value="CA">TC2</option>
-          <option value="FR">TC3</option> <option value="DE">TC4</option>
+          <option value="TC1">TC1</option> <option value="TC2">TC2</option>
+          <option value="TC3">TC3</option> <option value="TC4">TC4</option>
         </select>
       </div>
       
