@@ -12,10 +12,10 @@ export default function SideBar({ activePage }) {
   console.log(`active page is ${activePage}`);
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Dashboard", src: "Chart_fill" },
-    { title: "Upload", src: "Chat", icon: "FaFileUpload" },
     { title: "Search", src: "Search" },
-    { title: "Settings", src: "Setting" },
+    { title: "Upload", src: "Chat", icon: "FaFileUpload" },
+    { title: "Dashboard", src: "Chart_fill" },
+    // { title: "Settings", src: "Setting" },
   ];
   return (
     <div
