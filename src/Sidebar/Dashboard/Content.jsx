@@ -1,9 +1,70 @@
 import React from "react";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  ArcElement,
+  Legend
+} from 'chart.js';
+
 import { Pie } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Legend
+);
+
+import { Bar } from 'react-chartjs-2';
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Resumes by Technology',
+      position : 'bottom'
+    },
+  },
+};
+
+export const options1 = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Resumes by Business Process',
+      position : 'bottom'
+    },
+  },
+};
+
+const labels = ['Java', 'Python','ETL'];
+
+export const data1 = {
+  labels,
+  datasets: [
+    {
+      label: 'Skillset',
+      data: [10,20,30],
+      backgroundColor: 'rgb(56 189 248)',
+    }
+  ],
+};
+
 export const data = {
-  labels: ["Human Resources", "Onboarding", "Barclaycard"],
+  labels: ["TC1", "TC2", "TC3"],
   datasets: [
     {
       label: "# of Documents",
@@ -27,13 +88,14 @@ export const data = {
 };
 export default function Content() {
   return (
-    <div className="flex w-full h-full">
+    <div className="flex w-full h-full mt-20">
       
-      <div>
-        <Pie data={data} />
-        <div className="mt-3 flex justify-center">
-          <label>Documents Stored by Business Process</label>
-        </div>
+      <div className="w-1/2 h-1/2">
+        <Pie data={data} options={options1}/>
+        
+      </div>
+      <div className="w-1/2 mt-13">
+        <Bar options={options} data={data1} className="h-1/2"/>
       </div>
     </div>
   );

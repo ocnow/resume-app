@@ -25,7 +25,7 @@ function App() {
           <Routes>
             
             {/* <Route path='/uploadResume' element={<ResumeUploadComp />} />                       <Route path='/selectAction'  element={<EntryComp />}/> */}
-            <Route path='/login'  element={<LoginComp />}/> 
+            <Route path='/'  element={<LoginComp />}/> 
             <Route path="/dashboard" element={<SideApp />} />
             <Route path="/upload" element={<UploadIndex />} />
             <Route path="/search" element={<SearchIndex />} />

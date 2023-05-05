@@ -14,7 +14,7 @@ export default function LoginComp() {
         let userVal = userInput.current.value;
         let passVal = passInput.current.value;
 
-        if(userVal === "admin" && passVal === "password"){
+        if(userVal === "G01135655" && passVal === "password"){
             setShowWrCred(false);
             navigate('/Search');
             return;
