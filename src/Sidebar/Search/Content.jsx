@@ -65,9 +65,9 @@ export default function Content() {
             <select
               id="countries"
               className="bg-gray-50 border border-gray-300 text-gray-900 rounded-md focus:ring-blue-500 focus:border-blue-500 block h-8 p-1"
-              onChange={handleBCSelect} defaultValue="default"
+              onChange={handleBCSelect} defaultValue=""
             >
-              <option value="default">Choose a business center</option>
+              <option value="">Choose a business center</option>
               <option value="TC1">TC1</option>
               <option value="TC2">TC2</option>
               <option value="TC3">TC3</option>

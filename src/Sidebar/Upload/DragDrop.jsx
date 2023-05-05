@@ -93,10 +93,10 @@ const DragDropFiles = () => {
         <select
           id="underline_select"
           class="border-2 border-black rounded-md px-2 py-1 text-black-primary placeholder:text-slate-400 "
-          placeholder="Country choice" ref={searchRef} defaultValue={"default"}
+          placeholder="Country choice" ref={searchRef} defaultValue={""}
         >
 
-          <option value="default">
+          <option value="">
             Choose a Business Process
           </option>
           <option value="TC1">TC1</option> <option value="TC2">TC2</option>
