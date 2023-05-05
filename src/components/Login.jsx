@@ -1,12 +1,25 @@
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
 
 export default function LoginComp() {
 
     const navigate = useNavigate();
 
+    const [showWrCred,setShowWrCred] = useState(false);
+    const userInput = useRef();
+    const passInput = useRef();
+
     const login = function(){
         console.log("logging in.....");
-        navigate('/Search');
+        let userVal = userInput.current.value;
+        let passVal = passInput.current.value;
+
+        if(userVal === "admin" && passVal === "password"){
+            setShowWrCred(false);
+            navigate('/Search');
+            return;
+        }
+        setShowWrCred(true);
     }
 
     return <div className="flex justify-center items-center h-screen bg-gray-800">
@@ -16,13 +29,13 @@ export default function LoginComp() {
             <div className="mt-3">
                 <label htmlFor="username" className="block text-base mb-2">Username</label>
                 <input type="text" id="username" className="border w-full text-base px-2 py-1
-             focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Username ...." />
+             focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Username ...." ref={userInput}/>
             </div>
 
             <div className="mt-3">
                 <label htmlFor="password" className="block text-base mb-2">Password</label>
                 <input type="password" id="password" className="border w-full text-base px-2 py-1
-             focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password ...." />
+             focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password ...." ref={passInput} />
             </div>
             <div className="mt-3 flex justify-between items-center">
                 <div>
@@ -33,6 +46,10 @@ export default function LoginComp() {
                 <div>
                     <a href="#" className="text-blue-500 hover:text-blue-950">Forgot Password?</a>
                 </div>
+            </div>
+
+            <div>
+                <label className={`text-red-600 ${showWrCred ? "" : "hidden"}`}>Incorrect username or password!</label>
             </div>
 
             <div className="mt-5">
